@@ -1,3 +1,3 @@
 # startup
-this it the start of the start up application \
+start up application for 260 \
 ideas for start up
