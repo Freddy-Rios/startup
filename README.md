@@ -1,3 +1,3 @@
 # startup
 start up application for 260 \
-ideas for start up
+260 start up idea
