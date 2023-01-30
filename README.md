@@ -30,6 +30,7 @@ EC2 Notes:
 - name instances well with perpouse better for remembering
 - how to having a web server up and running
 - learned aws basic EC2 
+- elastic IP addresses and there benefits
 
 
 
