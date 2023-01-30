@@ -19,13 +19,19 @@ Key features:
 -	viewing others catalog
 
 
-
-
-
-
 GitHub Notes: \
 things that i learned is how easy it is to make commits from vsCode. \
 I also learned that I can open up a terminal and get an up to date code project just from a simple pull request. \
 overall I have never used github so learining all of these new commands was great and extreamly useful.
+
+
+EC2 Notes:
+- a remote server subscription run by amazon
+- name instances well with perpouse better for remembering
+- how to having a web server up and running
+- learned aws basic EC2 
+
+
+
 
 
