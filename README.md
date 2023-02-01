@@ -32,6 +32,11 @@ EC2 Notes:
 - learned aws basic EC2 
 - elastic IP addresses and there benefits
 
+route 53: 
+- Domain names made for human readability
+- How was makes it easy to get domain names just follow route 53 page
+- How to get sub-domain names by using * in the create records 
+
 
 
 
