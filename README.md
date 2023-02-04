@@ -38,6 +38,14 @@ route 53:
 - How to get sub-domain names by using * in the create records 
 - dont forget to add public IP to the value box
 
+HTTPS, TLS, and certificates:
+- Caddy provides a HTTPS 
+- Data encryption using TLS
+- The certificate issuer is responsible for verifying that the certificate owner actually owns the domain name represented by the certificate
+- Caddy uses lets encrypt by Mozilla 
+- Modern day usually only accepts HTTPS and not HTTP
+
+
 
 
 
