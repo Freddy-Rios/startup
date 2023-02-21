@@ -45,7 +45,12 @@ HTTPS, TLS, and certificates:
 - Caddy uses lets encrypt by Mozilla 
 - Modern day usually only accepts HTTPS and not HTTP
 
-
+css/simon css
+- I liked how with media control we can exclude things got make it smoother for different displays.
+- Using a flex box we can make different orientations 
+- With a grid we can have better organization. 
+- bootstrap makes it easy to have the css go straight into the HTML and when you know then it is easy to read
+- when coding the simon css it was intersting to see how the class elemts relate to the css
 
 
 
