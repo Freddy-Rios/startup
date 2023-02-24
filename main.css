@@ -3,10 +3,36 @@ html {
     background: whitesmoke;
 }
 
+/*naigation bar*/
+.navbar-navbar{
+    background:#444;
+    box-shadow:0px 1px 10px 10px #ddd;
+    height:auto;
+    text-align:center;
+    width:100%;
+}
+.navbar-navbar .navbar-nav .nav-item{
+    display:inline;
+}
+.navbar-navbar .navbar-nav .nav-item .nav-link{
+    color:#fff;
+    display:inline-block;
+    height:60px;
+    line-height:60px;
+    margin:0px;
+    padding:0px 15px;
+    text-decoration:none;
+    transition: color 0.3s ease-in;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color:#FCD000;
+}
+
 /* index.html css start */
 .container {
     margin: 50px auto;
     width: 560px;
+    display: block;
 }
 .card {
     background-color: white;
