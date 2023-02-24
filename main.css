@@ -1,0 +1,70 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);/*this is for the icons so that they can be stars*/
+/* index.html css start */
+
+/* end index css */
+
+/* this is for the stars in the index.html*/
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+
+
+.rating { 
+border: none;
+float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+margin: 5px;
+font-size: 1.25em;
+font-family: FontAwesome;
+display: inline-block;
+content: "\f005";
+}
+
+.rating > .half:before { 
+content: "\f089";
+position: absolute;
+}
+
+.rating > label { 
+color: #ddd; 
+float: right; 
+}
+/* end of star css */
+
+
+
+/*start of login page css */
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+
+.form {
+    position: center;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.form button {
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    background: #000000;
+}
