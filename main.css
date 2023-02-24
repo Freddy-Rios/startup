@@ -171,3 +171,34 @@ body {
     color: #ffffff;
     background: #000000;
 }
+
+/*account css*/
+.container-account {
+    margin: 50px auto;
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+}
+.card-image {
+    flex: 1;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+    margin-bottom: 65px;
+    width: 100%;
+    height: 125px;
+}
+.profile-img {
+    flex:1;
+    background: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #eee;
+}
+.card-info{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
