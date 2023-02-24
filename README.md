@@ -53,5 +53,12 @@ css/simon css
 - when coding the simon css it was intersting to see how the class elemts relate to the css
 
 
+startup html and css
+- html can be reused and if the classes are the same then the css will apply to them
+- with css you can tag mult. stamemts and get the right effect
+- margin and padding are different and should experimeint with which works best for the project.
+- div tags are important and useful if wanting a container. 
+
+
 
 
