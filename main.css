@@ -137,6 +137,54 @@ body {
     padding-right: 20px;
 }
 
+/* floating add button css*/
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.new-item-menu-label-container{
+	position:fixed;
+	bottom:52px;
+	right:110px;
+	display:table;
+	visibility: hidden;
+}
+.new-item-menu-label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+}
+
+.floating-btn + div.new-item-menu-label-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+  }
+  
+  .floating-btn:hover + div.new-item-menu-label-container{
+    visibility: visible;
+    opacity: 1;
+  }
+
 
 /*start of login page css */
 .login-page {
