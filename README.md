@@ -59,6 +59,11 @@ startup html and css
 - margin and padding are different and should experimeint with which works best for the project.
 - div tags are important and useful if wanting a container. 
 
+simon javascript
+- I learned that we can insert html elements into the web page directly with script
+- I also learned that all elemtets need to be in file when working with javascript or else it wount work properly and debugging becomes hard
+- with javascript we can add all the functionality we need for the wev page.
+- javascript makes it possible to edit the html and css to suit your needes.
 
 
 
