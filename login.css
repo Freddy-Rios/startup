@@ -1,0 +1,72 @@
+html {
+    background: whitesmoke;
+}
+.form {
+    display: flex;
+    position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+.register-form{
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.form input, .form button {
+    display: block;
+    background-color: #f2f2f2;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+  
+.form button {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+/* may change later */
+.form button:hover {
+    background-color: lightslategray;
+}
+
+.form .message {
+    margin: 15px 0;
+    color: #b3b3b3;
+}
+
+.form .message a {
+    text-decoration: none;
+    color: black;
+}
+
+.form .register-form, .form .login-form {
+    display: none;
+}
+
+.form .register-form.active, .form .login-form.active {
+    display: block;
+}
+  
