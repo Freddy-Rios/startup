@@ -70,5 +70,6 @@ startup javascript
 - making a button do actions like adding inner html or switching views 
 - onclick action and geting elements the correct way 
 - appending a child with JavaScript 
-
+fetch 
+- make calls to apis with javascript making it more useful and allowing my to use api's with easy with the JSON.stringify call.
 
