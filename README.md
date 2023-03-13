@@ -65,5 +65,10 @@ simon javascript
 - with javascript we can add all the functionality we need for the wev page.
 - javascript makes it possible to edit the html and css to suit your needes.
 
+startup javascript 
+- learning how inner html works and to set using ` ` tages diff from ' ' tags
+- making a button do actions like adding inner html or switching views 
+- onclick action and geting elements the correct way 
+- appending a child with JavaScript 
 
 
