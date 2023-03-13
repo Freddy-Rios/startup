@@ -29,6 +29,9 @@ html {
 }
 
 /* index.html css start */
+li {
+    text-decoration: none;
+}
 .container {
     margin: 50px auto;
     width: 560px;
