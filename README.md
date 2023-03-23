@@ -74,3 +74,8 @@ startup javascript
 fetch 
 - make calls to apis with javascript making it more useful and allowing my to use api's with easy with the JSON.stringify call.
 
+Simon Service
+- express and how to make it listen
+- I also found the idea of public packages to be made avalible for all of my front-end application files.
+- there is only a index.js file and that is what I like about the file structure of the application. 
+- while looking at the files I found that all even the assests are in the public section
