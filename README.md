@@ -79,3 +79,11 @@ Simon Service
 - I also found the idea of public packages to be made avalible for all of my front-end application files.
 - there is only a index.js file and that is what I like about the file structure of the application. 
 - while looking at the files I found that all even the assests are in the public section
+
+Simon DB
+- I like how mongodb makes it easy for someone to store information in there datatbase
+- what I remember most is how to make the Key private. 
+- making keys private is done in termainal and because im using mac it is under .zprofile
+- when accessing the db it is done in a seprate file usually just to get connection and information 
+- express is used to make the db more interactive placing scores in there
+- over all i liked how the tech all works together
