@@ -1,0 +1,15 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "You can store your watched movies in your personal catalog and rank them from one to five. share your catalog with your friends. You can also comment on your friends and talk about movies.  A nice feature is to rank other's catalogs to see who has the best movies. This is a great place to learn about movies and read others opinions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
