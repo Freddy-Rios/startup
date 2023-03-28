@@ -1,4 +1,8 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);/*this is for the icons so that they can be stars*/
+*{
+    margin: 0;
+    padding: 0;
+}
 html {
     background: whitesmoke;
 }
