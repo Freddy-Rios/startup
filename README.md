@@ -65,5 +65,32 @@ simon javascript
 - with javascript we can add all the functionality we need for the wev page.
 - javascript makes it possible to edit the html and css to suit your needes.
 
+startup javascript 
+- learning how inner html works and to set using ` ` tages diff from ' ' tags
+- making a button do actions like adding inner html or switching views 
+- onclick action and geting elements the correct way 
+- appending a child with JavaScript
+ 
+fetch 
+- make calls to apis with javascript making it more useful and allowing my to use api's with easy with the JSON.stringify call.
 
+Simon Service
+- express and how to make it listen
+- I also found the idea of public packages to be made avalible for all of my front-end application files.
+- there is only a index.js file and that is what I like about the file structure of the application. 
+- while looking at the files I found that all even the assests are in the public section
 
+Simon DB
+- I like how mongodb makes it easy for someone to store information in there datatbase
+- what I remember most is how to make the Key private. 
+- making keys private is done in termainal and because im using mac it is under .zprofile
+- when accessing the db it is done in a seprate file usually just to get connection and information 
+- express is used to make the db more interactive placing scores in there
+- over all i liked how the tech all works together
+
+Simon Login
+- using the express index is where get and post user information
+- index.js will call the databas.js working together to set user up and login user.
+- packages installed through npm makes this possibel use bcrypt, cookie-parser, express, mongodb, and uuid
+- some packages used to make it easier to clean up datat like cookie-parser
+- on datatbase the password is also encrypted so if db gets leaked there is still some security
