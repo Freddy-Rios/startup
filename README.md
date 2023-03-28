@@ -87,3 +87,10 @@ Simon DB
 - when accessing the db it is done in a seprate file usually just to get connection and information 
 - express is used to make the db more interactive placing scores in there
 - over all i liked how the tech all works together
+
+Simon Login
+- using the express index is where get and post user information
+- index.js will call the databas.js working together to set user up and login user.
+- packages installed through npm makes this possibel use bcrypt, cookie-parser, express, mongodb, and uuid
+- some packages used to make it easier to clean up datat like cookie-parser
+- on datatbase the password is also encrypted so if db gets leaked there is still some security
