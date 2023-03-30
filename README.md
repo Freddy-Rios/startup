@@ -94,3 +94,8 @@ Simon Login
 - packages installed through npm makes this possibel use bcrypt, cookie-parser, express, mongodb, and uuid
 - some packages used to make it easier to clean up datat like cookie-parser
 - on datatbase the password is also encrypted so if db gets leaked there is still some security
+
+Simon webSocket
+- add infor in index.js for websocket
+- i like how it makes informatoin to user more avaliable 
+- puablicly allows talk 
