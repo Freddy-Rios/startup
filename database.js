@@ -50,3 +50,4 @@ module.exports = {
     createUser,
     //TODO: ADD THE FUNCTIONS LATER FOR THE MOVIE CATALOG
   };
+  
