@@ -12,7 +12,47 @@ document.addEventListener('DOMContentLoaded', function() {
         var forms = document.querySelectorAll('form');
         forms.forEach(function(form) {
           form.classList.toggle('active');
-        });
-      });
+       });
     });
   });
+});
+
+(async()=>{
+  let authenticated = false;
+  const userName = localStorage.getItem('userName');
+  if (userName) {
+    //this gets the username input from the form of the user
+    const nameEl = document.querySelector('#userName');
+    nameEl.value = userName;
+    const user = await getUser(nameEl.vlaue);
+    authenticated = user?.authenticated;
+  }
+  if (authenticated){
+    //can display things to user or change view 
+
+  }
+})();
+
+async function login_Create(endpoint) {
+  const userName = document.querySelector('#userName')?.value;
+  const password = document.querySelector('#userPassword')?.value;
+  const response = await fetch(endpoint, {
+    method: 'post',
+    body: JSON.stringify({ email: userName, password: password }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }) ;
+  const body = await response.json();
+  
+  if (response?.status === 200) {
+    localStorage.setItem('userName', userName);
+    window.location.href = 'index.html';
+  }else{
+    //TODO: send error messeage
+  }
+}
+
+function logout() {
+  
+}
