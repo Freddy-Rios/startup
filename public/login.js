@@ -33,12 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+async function loginUser() {
+  login_Create(`/api/auth/login`);
+}
+async function createUser() {
+  login_Create(`/api/auth/create`);
+}
+
 async function login_Create(endpoint) {
   const userName = document.querySelector('#userName')?.value;
   const password = document.querySelector('#userPassword')?.value;
   const response = await fetch(endpoint, {
     method: 'post',
-    body: JSON.stringify({ email: userName, password: password }),
+    body: JSON.stringify({ userName: userName, password: password }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
@@ -54,5 +61,16 @@ async function login_Create(endpoint) {
 }
 
 function logout() {
-  
+  fetch(`/api/auth/logout`, {
+    method: 'delete',
+  }).then(() => (window.location.href = '/'));
+}
+async function getUser(userName) {
+  let scores = [];
+  // See if we have a user with the given email.
+  const response = await fetch(`/api/user/${userName}`);
+  if (response.status === 200) {
+    return response.json();
+  }
+  return null;
 }
