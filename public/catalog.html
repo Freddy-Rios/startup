@@ -143,12 +143,12 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="script.js"></script>
   </head>
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-sm 
-                  navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <a href="#" class="navbar-brand mb-0 h1"> Movie Catalog</a>
         <button 
@@ -170,7 +170,7 @@
               <a href="account.html" class="nav-link"> account </a>
             </li>
             <li class="nav-item ">
-              <a href="index.html" class="nav-link"> logout </a>
+              <button type="button" class="btn btn-secondary" onclick="logout()">logout</button>
             </li>
           </ul>
         </div>
@@ -181,24 +181,57 @@
     <main>
       <div class="container mt-5">
         <h2 class="text-center"> Movie Catalog </h2>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="main">
 
-          <div class="card movie_card">
+          <!-- <div class="card movie_card">
             <img src="images.jpg/images-1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">POKEMON Detective Pikachu</h5>
+              <h5 class="card-title">Movie Title</h5>
                 <span class="movie_info"><a href="moreinfo.html">more info</a></span>
                 <span class="movie_info float-right"><i class="fas fa-star"></i> 9 / 10</span>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
 
-        <button class="material-icons floating-btn" onclick="creatCard()">add</button>
+        <button class="material-icons floating-btn" data-bs-toggle="modal" data-bs-target="#myModal">add</button>
         <div class="new-item-menu-label-container">
         <div class="new-item-menu-label-text">Add Movie</div>
       </div>
+
+      <div class="container mt-5">
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Create Movie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label class="form-label" >Movie Photo URL</label>
+                    <input type="url" class="form-control" id="movieUrl"/>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Movie Title</label>
+                    <input type="text" class="form-control" id="movieTitle"/>
+                  </div>
+                  <!-- <div class="mb-3">
+                    <label class="form-label">Thoughts</label>
+                    <textarea class="form-control"></textarea>
+                  </div> -->
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" onclick="creatCard()" data-bs-dismiss="modal">submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
     
 

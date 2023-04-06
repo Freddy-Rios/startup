@@ -83,11 +83,6 @@ async function login(endpoint) {
   }
 }
 
-function logout() {
-  fetch(`/api/auth/logout`, {
-    method: 'delete',
-  }).then(() => (window.location.href = '/'));
-}
 async function getUser(userName) {
   // See if we have a user with the given email.
   const response = await fetch(`/api/user/${userName}`);
