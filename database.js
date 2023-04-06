@@ -40,7 +40,6 @@ async function createUser(userName, password) {
         token: uuid.v4(),
     };
     await userCollection.insertOne(user);
-    
     return user;
 }
 

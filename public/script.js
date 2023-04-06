@@ -1,6 +1,8 @@
 function creatCard (title, Image) {
 //this inner elemtnet is used to hold all the information that is needed to make a new card
 let main = document.getElementById('main');
+// add the imag and title be get element by ID with the .value
+
 let inner = `<div class="container">
 <div class="card">
     <div class="card-media">

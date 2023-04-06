@@ -16,11 +16,11 @@
       <form class="register-form">
         <input 
           type="text"
-          id="userName"
-          placeholder="example@email.com"/>
+          id="userNamez"
+          placeholder="username"/>
         <input 
           type="password" 
-          id="userPassword"
+          id="userPasswordz"
           placeholder="password"/>
         <input type="text" placeholder="email address"/>
         <button type="button" onclick="createUser()">
@@ -28,9 +28,16 @@
         </button>
         <p class="message">Already registered? <a href="#">Sign In</a></p>
       </form>
+
       <form class="login-form active">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
+        <input 
+        type="text" 
+        id="userName"
+        placeholder="username"/>
+        <input 
+        type="password" 
+        id="userPassword"
+        placeholder="password"/>
         <button type="button" onclick="loginUser()">
           login
         </button>
@@ -44,17 +51,11 @@
       <div class="modal-content text-dark">
         <div class="modal-body">error message here</div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-        </div>
+      </div>
       </div>
     </div>
   </div>
+
 </body>
 
 </html>

@@ -17,30 +17,51 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-(async()=>{
-  let authenticated = false;
-  const userName = localStorage.getItem('userName');
-  if (userName) {
-    //this gets the username input from the form of the user
-    const nameEl = document.querySelector('#userName');
-    nameEl.value = userName;
-    const user = await getUser(nameEl.vlaue);
-    authenticated = user?.authenticated;
-  }
-  if (authenticated){
-    //can display things to user or change view 
+// (async () => {
+//   let authenticated = false;
+//   const userName = localStorage.getItem('userName');
+//   if (userName) {
+//     const nameEl = document.querySelector('#userName');
+//     const user = await getUser(nameEl);
+//     authenticated = user?.authenticated;
+//   }
 
-  }
-})();
+//   if (authenticated) {
+//     window.location.href = 'catalog.html';
+//   } 
+// })();
+
 
 async function loginUser() {
-  login_Create(`/api/auth/login`);
+  login(`/api/auth/login`);
 }
 async function createUser() {
-  login_Create(`/api/auth/create`);
+  create(`/api/auth/create`);
 }
 
-async function login_Create(endpoint) {
+async function create(endpoint) {
+  const userName = document.querySelector('#userNamez')?.value;
+  const password = document.querySelector('#userPasswordz')?.value;
+  const response = await fetch(endpoint, {
+    method: 'post',
+    body: JSON.stringify({ userName: userName, password: password }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }) ;
+  const body = await response.json();
+  
+  if (response?.status === 200) {
+    localStorage.setItem('userName', userName);
+    window.location.href = 'catalog.html';
+  }else{
+    //send error messeage
+    const modalEl = document.querySelector('#msgModal');
+    modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
+  }
+}
+
+async function login(endpoint) {
   const userName = document.querySelector('#userName')?.value;
   const password = document.querySelector('#userPassword')?.value;
   const response = await fetch(endpoint, {
@@ -59,8 +80,6 @@ async function login_Create(endpoint) {
     //send error messeage
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
-    const msgModal = new bootstrap.Modal(modalEl, {});
-    msgModal.show();
   }
 }
 
@@ -70,7 +89,6 @@ function logout() {
   }).then(() => (window.location.href = '/'));
 }
 async function getUser(userName) {
-  let scores = [];
   // See if we have a user with the given email.
   const response = await fetch(`/api/user/${userName}`);
   if (response.status === 200) {
