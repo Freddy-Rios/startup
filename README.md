@@ -99,3 +99,11 @@ Simon webSocket
 - add infor in index.js for websocket
 - i like how it makes informatoin to user more avaliable 
 - puablicly allows talk 
+
+react cli
+- always do the following
+- Replace the icon files with your own icons
+- Modify the manifest.json and package.json to contain your application name
+- Modify the README.md to describe your application
+- Modify index.html to contain a proper title and description metadata.
+- deleting tests and services to make app simplier is good idea can be implemted later
