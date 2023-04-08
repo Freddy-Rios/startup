@@ -107,3 +107,9 @@ react cli
 - Modify the README.md to describe your application
 - Modify index.html to contain a proper title and description metadata.
 - deleting tests and services to make app simplier is good idea can be implemted later
+
+simon react
+- router is easy to make applicaton go to different places.
+- orginization is key to the files 
+- import bootstrapp through npm 
+- imports make ract app run 
