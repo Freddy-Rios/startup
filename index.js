@@ -72,7 +72,7 @@ apiRouter.get('/user/:userName', async (req, res) => {
 var secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
-secureApiRouter.use(async (req, res) => {
+secureApiRouter.use(async (req, res, next) => {
     authToken = req.cookies[authCookieName];
     const user = await DB.getUserByToken(authToken);
     if (user) {
@@ -82,7 +82,16 @@ secureApiRouter.use(async (req, res) => {
     }
 });
 //TODO: GET THE MOVIE CATALOG HERE FROM THE DB USING THE secureApiRouter
+secureApiRouter.get('/movies', async (req, res) => {
+    const movies = await DB.getMovies(req.body.userName);
+    res.send(movies);
+});
 
+secureApiRouter.post('/movie', async (req, res) => {
+    const movieCard = await DB.addMovie(req.body.userName, req.body.movieCard);
+    //const movies = await DB.getMovies(req.body.userName);
+    res.send(movieCard);
+});
 
 
 //return the application's default page if path is unknown 

@@ -19,6 +19,7 @@ const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 const client = new MongoClient(url);
 //set collections
 const userCollection = client.db('startup').collection('user');
+const movieCollection = client.db('startup').collection('catalog');
 //TODO: ADD THE MOVIECATALOG COLLECTION
 
 function getUser(userName) {
@@ -43,10 +44,30 @@ async function createUser(userName, password) {
     return user;
 }
 
+async function addMovie(userName, movieCard)  {
+    const movie = {
+        userName: userName,
+        movieCard: movieCard,
+    }
+    movieCollection.insertOne(movie);
+    return movie;
+}
+
+function getMovies(userName) {
+    const query = {};
+    const options = {
+        username: userName,
+    }
+    const cursor = movieCollection.find(query, options);
+    return cursor.toArray();
+}
+
 module.exports = {
     getUser,
     getUserByToken,
     createUser,
     //TODO: ADD THE FUNCTIONS LATER FOR THE MOVIE CATALOG
+    addMovie,
+    getMovies,
   };
   
