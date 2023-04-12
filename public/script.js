@@ -35,6 +35,7 @@ async function creatCard () {
   });
   const movie = await response.json();
 
+  broadcastEvent(userName, MovieAddedEvent);
 }
 
 async function getUser(userName) {
@@ -67,4 +68,36 @@ function logout() {
     }).then(() => (window.location.href = '/'));
 }
 
-loadMovies();
+// Functionality for peer communication using WebSocket
+async function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    socket.onopen = (event) => {
+    displayMsg('system', 'game', 'connected');
+    };
+    socket.onclose = (event) => {
+      displayMsg('system', 'game', 'disconnected');
+    };
+    socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+      if (msg.type === GameEndEvent) {
+        displayMsg('player', msg.from, `scored ${msg.value.score}`);
+      } else if (msg.type === GameStartEvent) {
+        displayMsg('player', msg.from, `started a new game`);
+      }
+    };
+  }
+
+  async function displayMsg(cls, from, msg) {
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML =
+      `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+  }
+
+  async function broadcastEvent(from, type) {
+    const event = {
+      from: from,
+      type: type,
+    };
+    socket.send(JSON.stringify(event));
+  }

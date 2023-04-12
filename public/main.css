@@ -4,7 +4,32 @@
 .navbar-nav .nav-item .nav-link:hover {
     color:#FCD000;
 }
-
+.players {
+    flex: 1;
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  .player-name {
+    color: rgb(118, 190, 210);
+  }
+  
+  #player-messages {
+    padding-top: 0.25em;
+    opacity: 0.7;
+  }
+  
+  .event {
+    color: rgb(69, 69, 69);
+  }
+  
+  .player-event {
+    color: rgb(165, 220, 235);
+  }
+  
+  .system-event {
+    color: rgb(221, 148, 40);
+  }
 /* index.html css start */
 .movie_card{
     padding: 0;
