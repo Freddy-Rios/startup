@@ -15,7 +15,6 @@ async function creatCard () {
   <img src="${image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${title}</h5>
-      <span class="movie_info"><a href="moreinfo.html">more info</a></span>
       <span class="movie_info float-right"><i class="fas fa-star"></i> ${rating}/ 10</span>
   </div>
   </div>`
