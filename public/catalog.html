@@ -164,7 +164,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item ">
-              <a href="catalog.html" class="nav-link"> Home </a>
+              <a href="catalog.html" class="nav-link active"> Home </a>
             </li>
             <li class="nav-item ">
               <a href="account.html" class="nav-link"> account </a>
@@ -182,7 +182,7 @@
       <div class="container mt-5">
         <h2 class="text-center"> Movie Catalog </h2>
         <div class="row justify-content-center" id="main">
-
+          
           <!-- <div class="card movie_card">
             <img src="images.jpg/images-1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -192,6 +192,7 @@
             </div>
           </div> -->
 
+          <button type="submit" class="btn btn-secondary" onclick="loadMovies()"> Load Movies </button>
         </div>
       </div>
 
@@ -218,10 +219,10 @@
                     <label class="form-label">Movie Title</label>
                     <input type="text" class="form-control" id="movieTitle"/>
                   </div>
-                  <!-- <div class="mb-3">
-                    <label class="form-label">Thoughts</label>
-                    <textarea class="form-control"></textarea>
-                  </div> -->
+                  <div class="mb-3">
+                    <label class="form-label">rating ?/10</label>
+                    <input type="text" class="form-control" id="movieRating"/>
+                  </div>
                 </form>
               </div>
               <div class="modal-footer">

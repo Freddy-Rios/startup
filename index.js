@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
 const app = express();
 const DB = require('./database');
+const { PeerProxy } = require('./peerProxy');
 
 const authCookieName = 'token';
 
@@ -65,7 +66,7 @@ apiRouter.get('/user/:userName', async (req, res) => {
         res.send({ userName: user.userName, authenticated: token === user.token });
         return;
     }
-    res.status(404).send({ msg: 'Unknown' })
+    res.status(404).send({ msg: 'Unknown' });
 });
 
 // secureApiRouter verifies credentials for endpoints
@@ -82,9 +83,13 @@ secureApiRouter.use(async (req, res, next) => {
     }
 });
 //TODO: GET THE MOVIE CATALOG HERE FROM THE DB USING THE secureApiRouter
-secureApiRouter.get('/movies', async (req, res) => {
-    const movies = await DB.getMovies(req.body.userName);
-    res.send(movies);
+secureApiRouter.get('/movies/:userName', async (req, res) => {
+    const movies = await DB.getMovies(req.params.userName);
+    if (movies) {
+        res.send(movies);
+        return;
+    }
+    res.status(404).send({ msg: 'Unknown' });
 });
 
 secureApiRouter.post('/movie', async (req, res) => {
@@ -94,6 +99,11 @@ secureApiRouter.post('/movie', async (req, res) => {
 });
 
 
+// Default error handler
+app.use(function (err, req, res, next) {
+    res.status(500).send({ type: err.name, message: err.message });
+  });
+
 //return the application's default page if path is unknown 
 app.use((_req,res)=> {
     res.sendFile('index.html', {root: 'public'});
@@ -102,12 +112,14 @@ app.use((_req,res)=> {
 // setAuthCookie in the HTTP response
 function setAuthCookie(res, authToken) {
     res.cookie(authCookieName, authToken, {
-      secure: true,
-      httpOnly: true,
-      sameSite: 'strict',
+        secure: true,
+        httpOnly: true,
+        sameSite: 'strict',
     });
-  }
+}
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+const httpService = app.listen(port, () => {
+console.log(`Listening on port ${port}`);
 });
+
+new PeerProxy(httpService);
