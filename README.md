@@ -113,3 +113,9 @@ simon react
 - orginization is key to the files 
 - import bootstrapp through npm 
 - imports make ract app run 
+
+start up service
+- index.js is where the api calls will go through
+- db can get accessed through the api calls 
+- id's are importat to get infromation from js
+- modal made easy through bootstrap
